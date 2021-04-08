@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="cottoninfo"> &#160;&#160;&#160;&#160;&#160; Cotton is one of the most important fibers and
+        a cash crop of India and plays a dominant role
+in the industrial and agricultural economy of the country. Cotton is the most important fiber
+crop not only of India but of the entire world. It provides the basic raw material (cotton fiber) to
+the cotton textile industry. Cotton in India provides a direct livelihood to 6 million farmers and
+about 40-50 million people are employed in the cotton trade and its processing. Indian cotton
+production is heavily associated with the intensive use of hazardous pesticides. Data reveals
+that Cotton cultivation in India consumes <b>44.5%</b> of the total pesticides used in the country. In
+addition, cotton is a water-thirsty crop and around <b>6%</b> of the water for irrigation in India is
+used for cotton cultivation. Its seed (binola) is used in the vanaspati industry and can also be
+        used as part of fodder for milch cattle to get better milk<br>\n</br><br>\n</br><br>\n</br>
+       <br><big><b>The factors for the growth of Cotton in India are:
+        </b></big>\n</br>
+
+        <br>1) Large favorable fertile Ganga Delta region.\n</br>
+        <br>2) Plenty of chea labor.\n</br>
+        <br>3) Introduction of insecticide to kill Boll Weevils\n</br>
+        <br>4) HYV seeds like Sujata,Bharati\n</br>
+        <br>\n</br><br>\n</br><br>\n</br>
+        <br>
+        Cultivating cotton in rotation method is very important. Cotton should be followed by
+        crops like <b>hybrid sorghum, Sugarcane, maize, banana etc </b>Cotton should not be followed by cotton
+        as it increases pest and disease problems.\n</br>
+        <br>\n</br><br>\n</br><br>\n</br>
+        <br>
+        <b>Gujarat, Maharashtra, Punjab, Uttar Pradesh, Tamil Nadu, Andhra Pradesh are the
+            principle cotton producing states in India</b>\n</br>
+    </string>
+
+    <string name="typesofcotton">
+        <br>\n</br><br>\n</br>
+        <b>a) Long staple cotton:</b>
+        <br>
+        &#160;&#160;&#160;&#160;&#160;It has the longest fiber whose length varies from <b>24 to 27 mm</b>. The fiber is long, fine and
+shining. It is used for making fine and superior quality cloth. Obviously, it fetches the best
+price. There has been rapid progress in the production of long-staple cotton since
+Independence. About half of the total cotton produced in India is a long staple. It is largely
+grown in <b>Punjab, Haryana, Maharashtra, Tamil Nadu, Madhya Pradesh, Gujarat, and Andhra
+Pradesh.</b>\n</br><br>\n</br><br>\n</br><br>\n</br>
+        <br>
+            <b>b) Medium staple cotton:</b>\n</br>
+            <br>
+&#160;&#160;&#160;&#160;&#160;The length of its fiber is between 20 mm and 24 mm. About 44 percent of the total cotton
+production in India is of the medium staple. <b>Rajasthan, Punjab, Tamil Nadu, Madhya Pradesh,
+Uttar Pradesh, Karnataka, and Maharashtra</b> are its main producers.\n</br><br>\n</br><br>\n</br><br>\n</br>
+<br>
+    <b>c) Short staple cotton:</b>\n</br>
+    <br>
+&#160;&#160;&#160;&#160;&#160;This is inferior cotton with fiber less than <b>20 mm</b> long. It is used for manufacturing inferior
+cloth and fetches less price. About 6 percent of the total production is of short staple cotton.<b>
+U.P., Andhra Pradesh, Telangana, Rajasthan, Haryana, and Punjab</b> are its main producers.\n</br>
+
+
+    </string>
+
+
+    <string name="cottonrequire"> <big><b>The hot and moist climate is ideal for cotton farming. The climate condition  for cotton
+        cultivation is mentioned below:</b></big>
+           <br>\n</br><br>\n</br>
+        <br>&#160;&#160;&#160;&#160;&#160;<b>70%</b> of cotton is rainfed. Clear sunshine and proper moisture level during boll
+            formation is required. Moisture stress from <b>60 days to 120 days</b> directly reduces the yield.
+More sunshine and warm humid climate favor the growth of the cotton crop. The low
+            temperature at the boll opening creates a problem in the harvest.\n</br>
+        <br>\n</br><br>\n</br>
+<br><b>1.Temperature:</b> 250C is ideal for cotton cultivation.\n</br>
+<br><b>2.Rainfall:</b> 150 cm to 200 cm rainfall is essential for cotton farming. Moisture in the wind is
+necessary.\n</br>
+<br><b>3.Soil:</b> Irrigated cotton should be grown on medium black to deep black soil having a <b>pH
+    range between 6 to 8.</b> Saline soils are not suitable for cotton cultivation. Soil should have
+    proper drainage. The depth of soil should <b>not be less than 20 to 25 cm.</b> It is advised to go for
+a soil test before cultivating the cotton.\n</br>
+        <br>\n</br><br>\n</br>
+        <br><big><b>Soil Preparation in Cotton Plantation:</b></big>\n</br>
+        <br>
+In Cotton production, the preparation of a good flatbed is very important. This can be done by
+plowing and disc harrowing. Plowing should be followed by harrowing operation making the fine
+til soil particle. For an advanced method of drip irrigation soil should be well prepared. Add 4
+to 5 tons of well-decomposed FYM or compost before the last harrowing. In the soils having
+termites or white grub, <b>add 750 to 1000 Kg/ha of Neem cake</b> along with FYM.\n</br>
+    </string>
+
+<string name="dis1">
+    <b><big>Symptoms</big></b><br>\n</br><br>\n</br>
+    <br>Brown or gray spots on leaves surrounded by a red halo, elongated
+        red-purple cankers on stems cause the wilting and death of leaves above\n</br>
+</string>
+
+    <string name="cure1">
+        <b><big>Management</big></b><br>\n</br><br>\n</br>
+        <br>PNo fungicides are currently registered for use in cotton; plow crop debris into soil after harvest,
+            crop rotation has little to no effect of control of disease.\n</br>
+    </string>
+
+    <string name="dis2">
+        <b><big>Symptoms</big></b><br>\n</br><br>\n</br>
+    <br>Wilting of cotyledons and seedling leaves, cotyledons become chlorotic at the edges and then necrotic,
+        older plants exhibit symptoms of wilting and leaf chlorosis; wilting is usually gradual but may be pronounced after heavy summer rain,
+        if infection is severe plants become stunted and may be killed,
+        vascular system of infected plants becomes discolored and can be seen by cutting the stem.\n</br>
+    </string>
+
+    <string name="cure2">
+        <b><big>Management</big></b><br>\n</br><br>\n</br>
+        <br>Use on certified, disease-free seed, plant varieties with higher resistance to
+            the disease in areas with a history of Fusarium diseases, fumigating the soil may reduce disease incidence.\n</br>
+    </string>
+
+    <string name="dis3">
+        <b><big>Symptoms</big></b><br>\n</br><br>\n</br>
+    <br>The symptoms can be found on leaves, boll bracts and on bolls. Initially the appearance of small chocolate brown spots
+        which later enlarge to become circular to irregular spot with target markings. The symptoms are mainly seen in the lower canopy.
+        Typically the infected leaves retain their green color or green yellow color. Under severe conditions leaf and
+        flower drop may occur.\n</br>
+    </string>
+
+    <string name="cure3">
+        <b><big>Management</big></b><br>\n</br><br>\n</br>
+        <br>Use available resistant varieties. Follow crop rotation. Spray suitable fungicide.\n</br>
+    </string>
+
+    <string name="dis4">
+        <b><big>Symptoms</big></b><br>\n</br><br>\n</br>
+    <br>Water-soaked spots on leaves which are delimited by leaf veins, giving them an angular appearance,
+        lesions increase in size and turn black and necrotic; leaves drop from the plant,
+        disease may also cause elongated gray-black lesions extending from the leaves to petioles and stem which are known as the
+        "blackarm" phase,
+        severe blackarm symptoms may cause the stem to be girdled,
+        water-soaked lesions may be present on bolls,
+        boll lesions enlarge and become sunken and brown-black in color.\n</br>
+    </string>
+
+    <string name="cure4">
+        <b><big>Management</big></b><br>\n</br><br>\n</br>
+        <br>The use of resistant cotton varieties is the most effective method of controlling the disease,
+            cultural practices such as plowing crop residue into soil after harvest can also limit disease emergence.\n</br>
+    </string>
+
+
+    <string name="dis5">
+        <b><big>Symptoms</big></b><br>\n</br><br>\n</br>
+    <br>Small soft bodied insects on underside of leaves and/or stems of plant,
+        usually green or yellow in color, but may be pink, brown, red or black depending on species and host plant,
+        if aphid infestation is heavy it may cause leaves to yellow and/or distorted, necrotic spots on leaves and/or stunted shoots,
+        aphids secrete a sticky, sugary substance called honeydew which encourages the growth of sooty mold on the plants.\n</br>
+    </string>
+
+    <string name="cure5">
+        <b><big>Management</big></b><br>\n</br><br>\n</br>
+        <br>If aphid population is limited to just a few leaves or shoots then the infestation can be pruned out to provide control,
+            check transplants for aphids before planting; use tolerant varieties if available,
+            reflective mulches such as silver colored plastic can deter aphids from feeding on plants,
+            sturdy plants can be sprayed with a strong jet of water to knock aphids from leaves,
+            insecticides are generally only required to treat aphids if the infestation is very high -
+            plants generally tolerate low and medium level infestation; insecticidal soaps or oils such as
+            neem or canola oil are usually the best method of control,
+            always check the labels of the products for specific usage guidelines prior to use.\n</br>
+    </string>
+
+
+    <string name="dis6">
+        <b><big>Symptoms</big></b><br>\n</br><br>\n</br>
+    <br>Holes in bracts associated with bolls; heavy feeding by young larvae leads to skeletonized leaves,
+        shallow, dry wounds on fruit,
+        egg clusters of 50-150 eggs may be present on the leaves,
+        egg clusters are covered in a whitish scale which gives the cluster a cottony or fuzzy appearance,
+        young larvae are pale green to yellow in color while older larvae are generally darker green with a dark
+        and light line running along the side of their body and a pink or yellow underside.\n</br>
+    </string>
+
+    <string name="cure6">
+        <b><big>Management</big></b><br>\n</br><br>\n</br>
+        <br>Organic methods of controlling armyworms include biological control by natural enemies which parasitize
+            the larvae and the application of Bacillus thuringiensis; there are chemicals available for commercial
+            control but many that are available for the home garden do not provide adequate control of the larvae.\n</br>
+    </string>
+
+
+
+    <string name="dis7">
+        <b><big>Symptoms</big></b><br>\n</br><br>\n</br>
+    <br>Holes chewed in bases of bolls and insect frass around holes;oung caterpillars are
+        cream-white in color with a black head and black hairs; older larvae may be yellow-green
+        to almost black in color with fine white lines along their body and black spots at the base of hairs,
+        eggs are laid singly on both upper and lower leaf surfaces and
+        are initially creamy white but develop a brown-red ring after 24 hours and darken prior to hatching.\n</br>
+    </string>
+
+    <string name="cure7">
+        <b><big>Management</big></b><br>\n</br><br>\n</br>
+        <br>Monitor plants for eggs and young larvae and also natural enemies that could be damaged by chemicals,
+            Bacillus thuringiensis or Entrust SC may be applied to control insects on organically grown plants,
+            appropriate chemical treatment may be required for control in commercial. plantations.\n</br>
+    </string>
+
+
+
+
+
+</resources>
