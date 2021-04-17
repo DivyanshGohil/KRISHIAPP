@@ -5,13 +5,72 @@
     android:layout_height="match_parent"
     tools:context=".fragment3">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:layout_gravity="center"
-        android:textColor="#000"
-        android:textStyle="bold"
-        android:text="Fragment-3" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:background="@color/cream">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:text="Market Yard Prices"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/updatedate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last updated on "
+            android:layoutDirection="rtl"
+            android:textAlignment="viewStart"
+            android:gravity="start"
+            android:textColor="#000"
+            android:paddingRight="20dp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cropresult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:id="@+id/minresult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:paddingLeft="10dp"
+                android:textColor="#000"
+                />
+
+            <TextView
+                android:id="@+id/maxresult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:paddingLeft="10dp"
+                android:textColor="#000" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
 </FrameLayout>

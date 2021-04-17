@@ -48,6 +48,8 @@ public class LogIn extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+       // Intent intent = new Intent(this,NavwithTab.class);
+        //startActivity(intent);
         //updateUI(account);
     }
     private void signIn() {

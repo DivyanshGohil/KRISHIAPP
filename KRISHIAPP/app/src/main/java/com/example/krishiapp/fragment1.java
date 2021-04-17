@@ -20,17 +20,26 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -61,12 +70,17 @@ public class fragment1 extends Fragment {
 
     String Location_Provider = LocationManager.GPS_PROVIDER;
 
-    TextView NameofCity, weatherState, Temperature;
+    TextView Temperature,WeatherCondition,City,Lat,Lon,desc;
+    //RelativeLayout outbutton;
+
+
     //Imagevview
-    RelativeLayout mCityFinder;
+
 
     LocationManager mLocationManager;
     LocationListener mLocationListerner;
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -107,9 +121,6 @@ public class fragment1 extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-
-
-
     }
 
     @Override
@@ -118,18 +129,64 @@ public class fragment1 extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_fragment1, container, false);
 
-        weatherState = (TextView) v.findViewById(R.id.weatherCondition);
-        Temperature = (TextView) v.findViewById(R.id.temperature);
-        mCityFinder = v.findViewById(R.id.cityFinder);
-        NameofCity = (TextView) v.findViewById(R.id.cityName);
+        Temperature = v.findViewById(R.id.temperature);
+        WeatherCondition = v.findViewById(R.id.weatherCondition);
+        City = v.findViewById(R.id.cityName);
+        Lat = v.findViewById(R.id.latitude);
+        Lon = v.findViewById(R.id.longitude);
+        desc = v.findViewById(R.id.description);
+        //outbutton = v.findViewById(R.id.output);
 
-        mCityFinder.setOnClickListener(new View.OnClickListener() {
+
+        RequestQueue requestQueue;
+        requestQueue = Volley.newRequestQueue(getContext());
+
+        JsonObjectRequest jsonObjectRequest =new JsonObjectRequest(Request.Method.GET, "https://mocki.io/v1/6563038b-c0a3-4775-a094-7c00986daf71"
+                , null, new Response.Listener<JSONObject>() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), cotton.class);
-                startActivity(intent);
+            public void onResponse(JSONObject response) {
+
+                try {
+                    String lon = response.getJSONObject("coord").getString("lon");
+                    String lan = response.getJSONObject("coord").getString("lat");
+                    String city = response.getString("name");
+                    Log.d("myapp",city);
+                    double te = response.getJSONObject("main").getDouble("temp")-273.15;
+                    String temp = String.valueOf(te);
+                    String subtemp = temp.substring(0,6);
+
+                    String wc = response.getJSONArray("weather").getJSONObject(0).getString("main");
+                    String des = response.getJSONArray("weather").getJSONObject(0).getString("description");
+
+                    desc.setText(des);
+                    Temperature.setText(subtemp +"°C");
+                    WeatherCondition.setText(wc);
+                    City.append(city);
+                    Lat.append(lan);
+                    Lon.append(lon);
+
+                    Log.d("myapp",subtemp);
+                    Log.d("myapp",wc);
+                    Log.d("myapp",city);
+                    Log.d("myapp",lan);
+
+
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("myapp","Something went wrong");
             }
         });
+
+        requestQueue.add(jsonObjectRequest);
+
         return v;
     }
 
@@ -145,16 +202,14 @@ public class fragment1 extends Fragment {
 
             String Latitude = String.valueOf(location.getLatitude());
             String Longitude = String.valueOf(location.getLongitude());
-            Log.i("LATITUDE",Latitude);
-            Log.i("LONGITUDE",Longitude);
+            Log.d("myapp",Latitude);
+            Log.d("myapp",Longitude);
+
+
 
             String url = "http://api.openweathermap.org/data/2.5/weather?lat=" +Latitude+ "&lon=" +Longitude+ "&appid=" +APP_ID;
 
-            RequestParams params = new RequestParams();
-            params.put("lat",Latitude);
-            params.put("lon",Longitude);
-            params.put("appid",APP_ID);
-            letsdoSomeNetworking(url);
+
         };
 
         if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
@@ -191,38 +246,10 @@ public class fragment1 extends Fragment {
         }
     }
 
-    private void letsdoSomeNetworking(String url)
-    {
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.get(url,new JsonHttpResponseHandler(){
-
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-
-                Toast.makeText(getActivity(),"DATA GET SUCCESSFULLY",Toast.LENGTH_SHORT).show();
-
-                weatherdata weatherD = weatherdata.fromJson(response);
-                updateUI(weatherD);
-
-                //super.onSuccess(statusCode, headers, response);
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                Toast.makeText(getActivity(),"DATA NOT GET ",Toast.LENGTH_SHORT).show();
-                //super.onFailure(statusCode, headers, throwable, errorResponse);
-            }
-        });
-    }
-
-    private void updateUI(weatherdata weather){
-
-        Temperature.setText(weather.getmTemperature());
-        NameofCity.setText(weather.getmCity());
-        weatherState.setText(weather.getMweatherType());
 
 
-    }
+
+
 
     @Override
     public void onPause() {

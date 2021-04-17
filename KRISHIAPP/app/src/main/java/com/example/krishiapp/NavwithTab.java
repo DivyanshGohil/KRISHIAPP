@@ -11,9 +11,17 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.ActionBar;
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Application;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.ConfigurationInfo;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,6 +35,9 @@ import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 import java.io.File;
+import java.util.Locale;
+
+import cz.msebera.android.httpclient.client.cache.Resource;
 
 public class NavwithTab extends AppCompatActivity {
 
@@ -39,11 +50,20 @@ public class NavwithTab extends AppCompatActivity {
     ViewPager viewPager;
     fragmentmanager fragmentManager;
 
+    boolean lang_selected = true;
+    Context context;
+    Resource resource;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        
+
         setContentView(R.layout.activity_navwith_tab);
+
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setTitle("KRISHI APP");
 
@@ -111,6 +131,42 @@ public class NavwithTab extends AppCompatActivity {
                         Intent intent = new Intent(NavwithTab.this,aboutus.class);
                         startActivity(intent);
                         break;
+                    }
+                    case R.id.Language:{
+
+                        final String[] language = {"ENGLISH","हिंदी"};
+                        int checkeditem;
+
+                        if(lang_selected){
+                            checkeditem=0;
+                        }else{
+                            checkeditem=1;
+                        }
+
+                        final AlertDialog.Builder builder = new AlertDialog.Builder(NavwithTab.this);
+                         builder.setTitle("Select a Language").setSingleChoiceItems(language, checkeditem,
+                                 new DialogInterface.OnClickListener() {
+                                     @Override
+                                     public void onClick(DialogInterface dialog, int which) {
+                                         if(language[which].equals("ENGLISH")){
+                                             context = LocaleHelper.setLocale(NavwithTab.this,"en");
+                                             resource = (Resource) context.getResources();
+                                             //helloworldtext.settext(resources.getstring(R.string.language));
+                                         }
+                                         if(language[which].equals("हिंदी")){
+                                             context = LocaleHelper.setLocale(NavwithTab.this,"hi");
+                                             resource = (Resource) context.getResources();
+                                         }
+                                     }
+                                 }).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                             @Override
+                             public void onClick(DialogInterface dialog, int which) {
+                                 dialog.dismiss();
+                             }
+                         });
+
+                         builder.create().show();
+
                     }
 
                 }

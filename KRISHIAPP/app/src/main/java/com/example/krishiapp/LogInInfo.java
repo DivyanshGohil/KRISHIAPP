@@ -3,6 +3,7 @@ package com.example.krishiapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -75,6 +76,8 @@ public class LogInInfo extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         // ...
                         Toast.makeText(LogInInfo.this,"Signed out succesfully",Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(LogInInfo.this,HomeActivity.class);
+                        startActivity(intent);
                         finish();
                     }
                 });
