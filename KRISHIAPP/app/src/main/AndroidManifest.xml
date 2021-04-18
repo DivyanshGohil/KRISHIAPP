@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KRISHIAPP">
-        <activity android:name=".aboutus"></activity>
+        <activity android:name=".apple"></activity>
+        <activity android:name=".aboutus" />
         <activity android:name=".cottonrequire" />
         <activity android:name=".cottonpests" />
         <activity android:name=".typesofcotton" />

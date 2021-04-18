@@ -19,7 +19,7 @@ import android.view.ViewGroup;
  */
 public class fragment2 extends Fragment  {
 
-    CardView cotton;
+    CardView cotton,apple;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -70,10 +70,19 @@ public class fragment2 extends Fragment  {
 
         View v = inflater.inflate(R.layout.fragment_fragment2, container, false);
         cotton = (CardView) v.findViewById(R.id.c1);
+        apple = (CardView) v.findViewById(R.id.c2);
         cotton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(),cotton.class);
+                startActivity(i);
+            }
+        });
+
+        apple.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),apple.class);
                 startActivity(i);
             }
         });

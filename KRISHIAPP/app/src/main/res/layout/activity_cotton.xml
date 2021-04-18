@@ -23,7 +23,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/buttondesign"
+        android:background="@drawable/buttondesign2"
         android:layout_marginTop="30dp"
         android:text="INTRODUCTION"
         android:id="@+id/introcotton"
@@ -32,7 +32,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/buttondesign"
+        android:background="@drawable/buttondesign2"
         android:layout_marginTop="20dp"
         android:text="TYPES OF COTTON"
         android:id="@+id/typesofcotton"
@@ -41,7 +41,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/buttondesign"
+        android:background="@drawable/buttondesign2"
         android:layout_marginTop="20dp"
         android:text="CLIMATE/SOIL REQUIREMENT"
         android:id="@+id/climate_soil_ofcotton"
@@ -51,7 +51,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/buttondesign"
+        android:background="@drawable/buttondesign2"
         android:layout_marginTop="20dp"
         android:text="PESTS/DISEASES"
         android:id="@+id/diseases_cotton"

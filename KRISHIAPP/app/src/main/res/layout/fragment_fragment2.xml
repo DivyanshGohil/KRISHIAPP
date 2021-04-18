@@ -272,11 +272,11 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cotton"/>
+                        android:src="@drawable/guava"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="cotton"
+                        android:text="Guava"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@android:color/black"
@@ -309,11 +309,11 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/apple"/>
+                        android:src="@drawable/brinjal"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Apple"
+                        android:text="Brinjal"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@android:color/black"
@@ -345,11 +345,11 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/corn"/>
+                        android:src="@drawable/onion"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Corn"
+                        android:text="Onion"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@android:color/black"
@@ -382,11 +382,11 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/paddy"/>
+                        android:src="@drawable/tomato"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Paddy"
+                        android:text="Tomato"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@android:color/black"
@@ -419,11 +419,11 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/potatoes"/>
+                        android:src="@drawable/lemon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Potatoes"
+                        android:text="Lemon"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@android:color/black"
@@ -456,11 +456,11 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/wheat"/>
+                        android:src="@drawable/bittergourd"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wheat"
+                        android:text="Bittergourd"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@android:color/black"
