@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -71,7 +72,7 @@ public class fragment1 extends Fragment {
     String Location_Provider = LocationManager.GPS_PROVIDER;
 
     TextView Temperature,WeatherCondition,City,Lat,Lon,desc;
-    //RelativeLayout outbutton;
+    RelativeLayout outbutton;
 
 
     //Imagevview
@@ -135,63 +136,70 @@ public class fragment1 extends Fragment {
         Lat = v.findViewById(R.id.latitude);
         Lon = v.findViewById(R.id.longitude);
         desc = v.findViewById(R.id.description);
-        //outbutton = v.findViewById(R.id.output);
+        outbutton = v.findViewById(R.id.output);
 
 
         RequestQueue requestQueue;
         requestQueue = Volley.newRequestQueue(getContext());
 
-        JsonObjectRequest jsonObjectRequest =new JsonObjectRequest(Request.Method.GET, "https://mocki.io/v1/6563038b-c0a3-4775-a094-7c00986daf71"
-                , null, new Response.Listener<JSONObject>() {
+
+        outbutton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onResponse(JSONObject response) {
+            public void onClick(View v) {
+                JsonObjectRequest jsonObjectRequest =new JsonObjectRequest(Request.Method.GET, "https://mocki.io/v1/6563038b-c0a3-4775-a094-7c00986daf71"
+                        , null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
 
-                try {
-                    String lon = response.getJSONObject("coord").getString("lon");
-                    String lan = response.getJSONObject("coord").getString("lat");
-                    String city = response.getString("name");
-                    Log.d("myapp",city);
-                    double te = response.getJSONObject("main").getDouble("temp")-273.15;
-                    String temp = String.valueOf(te);
-                    String subtemp = temp.substring(0,6);
+                        try {
+                            String lon = response.getJSONObject("coord").getString("lon");
+                            String lan = response.getJSONObject("coord").getString("lat");
+                            String city = response.getString("name");
+                            Log.d("myapp",city);
+                            double te = response.getJSONObject("main").getDouble("temp")-273.15;
+                            String temp = String.valueOf(te);
+                            String subtemp = temp.substring(0,6);
 
-                    String wc = response.getJSONArray("weather").getJSONObject(0).getString("main");
-                    String des = response.getJSONArray("weather").getJSONObject(0).getString("description");
+                            String wc = response.getJSONArray("weather").getJSONObject(0).getString("main");
+                            String des = response.getJSONArray("weather").getJSONObject(0).getString("description");
 
-                    desc.setText(des);
-                    Temperature.setText(subtemp +"°C");
-                    WeatherCondition.setText(wc);
-                    City.append(city);
-                    Lat.append(lan);
-                    Lon.append(lon);
+                            desc.setText(des);
+                            Temperature.setText(subtemp +"°C");
+                            WeatherCondition.setText(wc);
+                            City.append(city);
+                            Lat.append(lan);
+                            Lon.append(lon);
 
-                    Log.d("myapp",subtemp);
-                    Log.d("myapp",wc);
-                    Log.d("myapp",city);
-                    Log.d("myapp",lan);
-
-
+                            Log.d("myapp",subtemp);
+                            Log.d("myapp",wc);
+                            Log.d("myapp",city);
+                            Log.d("myapp",lan);
 
 
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
 
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.d("myapp","Something went wrong");
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("myapp","Something went wrong");
+                    }
+                });
+                requestQueue.add(jsonObjectRequest);
             }
         });
 
-        requestQueue.add(jsonObjectRequest);
+
 
         return v;
     }
 
     @Override
-    public void onResume() {
+      public void onResume() {
         super.onResume();
         getWeatherForCurrentLocation();
     }
@@ -223,7 +231,7 @@ public class fragment1 extends Fragment {
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
             ActivityCompat.requestPermissions(getActivity(),new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
-            return;
+            return ;
         }
         mLocationManager.requestLocationUpdates(Location_Provider, MIN_TIME, MIN_DISTANCE, mLocationListerner);
 
@@ -236,11 +244,13 @@ public class fragment1 extends Fragment {
         if(requestCode==REQUEST_CODE)
         {
             if(grantResults.length>0&&grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                Log.d("myapp","get");
                 Toast.makeText(getContext(),"LOCATION GET SUCCESSFULLY",Toast.LENGTH_SHORT).show();
-                getWeatherForCurrentLocation();
+                //getWeatherForCurrentLocation();
             }
             else
             {
+                Log.d("myapp","Not get");
                 Toast.makeText(getContext(),"LOCATION GET DENIED",Toast.LENGTH_SHORT).show();
             }
         }
