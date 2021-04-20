@@ -7,7 +7,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/demo"
+        android:icon="@mipmap/krishiapp"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.KRISHIAPP">
