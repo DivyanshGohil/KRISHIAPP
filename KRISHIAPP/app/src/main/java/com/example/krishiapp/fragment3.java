@@ -94,6 +94,10 @@ public class fragment3 extends Fragment {
                         cropinfo.append("\n\n\nCROP \n\n");
                         mininfo.append("\n\n\nMIN \n\n");
                         maxinfo.append("\n\n\nMAX \n\n");
+
+                        cropinfo.append("\n \n\n");
+                        mininfo.append("\n/100Kg \n\n");
+                        maxinfo.append("\n/100Kg \n\n");
                         String date = response.getString("updated_date");
                         String substr = date.substring(0,10);
                         upddate.append(substr);
