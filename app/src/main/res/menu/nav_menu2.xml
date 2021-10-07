@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/my_account"
+        android:icon="@drawable/ic_baseline_account_box_24"
+          android:title="MY ACCOUNT"/>
+    <item android:id="@+id/Language"
+        android:icon="@drawable/ic_baseline_language_24"
+        android:title="LANGUAGE"/>
+    <item android:id="@+id/share"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:title="SHARE"/>
+    <item android:id="@+id/about_us"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="ABOUT US"/>
+
+
+</menu>

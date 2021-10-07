@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@color/cream"
+    tools:context=".LogInInfo">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="182dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/todo" />
+
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:layout_below="@id/imageView"
+        android:inputType="textPersonName"
+        android:text="@string/name"
+        android:textSize="18sp"
+        android:background="@android:color/transparent"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18sp"
+        android:layout_below="@id/imageView"
+        android:layout_toRightOf="@id/editTextTextPersonName"
+     />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:layout_below="@id/editTextTextPersonName"
+        android:inputType="textPersonName"
+        android:text="@string/email"
+        android:textSize="18sp"
+        android:background="@android:color/transparent"
+/>
+
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@id/textName"
+        android:layout_toRightOf="@id/editTextTextPersonName3"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18sp"
+  />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTextPersonName3"
+        android:ems="4"
+        android:fontFamily="sans-serif"
+        android:inputType="textPersonName"
+        android:text="@string/id"
+        android:textSize="18sp"
+        android:importantForAutofill="no"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:id="@+id/textId"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:fontFamily="sans-serif-black"
+        android:layout_below="@id/textEmail"
+        android:layout_toRightOf="@id/editTextTextPersonName4"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_below="@id/textId"
+        android:layout_centerHorizontal="true"
+        android:text="@string/sign_out"
+        />
+</RelativeLayout>

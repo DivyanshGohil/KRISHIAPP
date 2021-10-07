@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.krishiapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/krishiapp"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KRISHIAPP">
+        <activity android:name=".applepests"></activity>
+        <activity android:name=".applerequire" />
+        <activity android:name=".typesofapple" />
+        <activity android:name=".apple_info" />
+        <activity android:name=".apple" />
+        <activity android:name=".aboutus" />
+        <activity android:name=".cottonrequire" />
+        <activity android:name=".cottonpests" />
+        <activity android:name=".typesofcotton" />
+        <activity android:name=".cotton_info" />
+        <activity android:name=".cotton" />
+        <activity android:name=".NavwithTab" />
+        <activity
+            android:name=".TabExample"
+            android:theme="@style/Theme.KRISHIAPP.NoActionBar." />
+        <activity android:name=".mainPage" />
+        <activity android:name=".LogInInfo" />
+        <activity android:name=".LogIn" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

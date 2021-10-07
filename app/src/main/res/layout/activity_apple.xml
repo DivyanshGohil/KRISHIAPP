@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".apple"
+    android:background="@color/cream"
+    android:orientation="vertical">
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/appleyoutube"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:id="@+id/playforapple"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/youtubebutton"
+        android:textColor="#ffffff"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttondesign2"
+        android:layout_marginTop="30dp"
+        android:text="INTRODUCTION"
+        android:id="@+id/introapple"
+        android:textSize="20dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttondesign2"
+        android:layout_marginTop="20dp"
+        android:text="TYPES OF COTTON"
+        android:id="@+id/typesofapple"
+        android:textSize="20dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttondesign2"
+        android:layout_marginTop="20dp"
+        android:text="CLIMATE/SOIL REQUIREMENT"
+        android:id="@+id/climate_soil_ofapple"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttondesign2"
+        android:layout_marginTop="20dp"
+        android:text="PESTS/DISEASES"
+        android:id="@+id/diseases_apple"
+        android:textSize="20dp"
+        />
+
+
+
+
+
+</LinearLayout>
